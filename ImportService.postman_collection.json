@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "b2697d51-235a-4444-9943-ef700f65974a",
+		"name": "ImportService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FileUpload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CSVFile",
+							"type": "file",
+							"src": "/Users/I533804/Desktop/personal/project/dataSet/eurofxref-hist.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8082/exchangeapp/import/upload/EUR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"exchangeapp",
+						"import",
+						"upload",
+						"EUR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDBSavedData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/exchangeapp/read/getAllSavedData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"exchangeapp",
+						"read",
+						"getAllSavedData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
